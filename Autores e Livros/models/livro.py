@@ -29,7 +29,7 @@ class Livro:
             genero = result[0]["genero"]
             numero_paginas = result[0]["numero_paginas"]
             autor = result[0]["autor"] or "Autor desconhecido"
-            return f"Título: {titulo}\nAno: {ano}\nGênero: {genero}\nNúmero de Páginas: {numero_paginas}\nAutor: {autor}"
+            return f"--------\nInformações:\nTítulo: {titulo}\nAno: {ano}\nGênero: {genero}\nNúmero de Páginas: {numero_paginas}\nAutor: {autor}\n--------"
         else:
             return "Livro não encontrado."
 

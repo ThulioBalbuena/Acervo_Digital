@@ -3,7 +3,7 @@ from models.autor import Autor
 from models.livro import Livro
 
 def menu():
-    conn = Neo4jConnection("bolt://52.90.83.240:7687", "neo4j", "sheet-muscles-folds")
+    conn = Neo4jConnection("bolt://44.201.35.42:7687", "neo4j", "lumber-carbons-clerk")
     while True:
         print("1. Criar Livro")
         print("2. Ler Livro")
@@ -13,8 +13,7 @@ def menu():
         print("6. Ler Autor")
         print("7. Atualizar Autor")
         print("8. Deletar Autor")
-        print("9. Adicionar Livro a Autor")
-        print("10. Sair")
+        print("9. Sair")
         escolha = input("Escolha uma opção: ")
         
         if escolha == '1':
@@ -22,8 +21,7 @@ def menu():
             ano = input("Ano do Livro: ")
             genero = input("Gênero do Livro: ")
             numero_paginas = int(input("Número de Páginas do Livro: "))
-            autor_nome = input("Nome do Autor do Livro: ")
-            
+            autor_nome = input("Nome do Autor do Livro: ")            
             verificar = Autor.ler(conn, autor_nome)
             if verificar == "Autor não encontrado.":
                 print("Autor não encontrado.")

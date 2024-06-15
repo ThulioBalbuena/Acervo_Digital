@@ -25,7 +25,7 @@ class Autor:
                 livros_str = "\n".join(livros)
             else:
                 livros_str = "Nenhum livro encontrado"
-            return f"Nome: {nome}\nIdade: {idade}\nLivros:\n{livros_str}"
+            return f"--------\nInformações:\nNome: {nome}\nIdade: {idade}\nLivros:\n{livros_str}\n--------"
         else:
             return "Autor não encontrado."
 
